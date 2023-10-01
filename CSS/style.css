@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pixelify Sans', cursive;
+}
+
+html, body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../Assets/image/fondo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    height: 80px;
+    position: relative;
+}
+
+.navcontainer {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    line-height: 80px;
+    z-index: 100;
+}
+
+.optionsbar .links {
+    display: inline-block;
+}
+
+.optionsbar .links a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    margin: 0 25px;
+    letter-spacing: 3px;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a span{
+    margin-right: 10px;
+}
+
+.logo{
+    margin-left: 20px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.logo p{
+    font-weight: 300;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.toggle{
+    margin-right: 20px;
+    font-size: 30px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: .5s;
+    display: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.conteiner{
+    width: 100%;
+    height: min-content;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p1{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 50px;
+}
+
+.color{
+    background: #ee2199!important;
+    transition: .5s;
+}
+
+
+@media screen and (max-width: 800px){
+    .toggle{
+        display: inline-block;
+    }
+
+    .optionsbar{
+        background: #ee2199;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        height: calc(100vh - 80px);
+        width: 100%;
+        height: auto;
+        top:-100vh;
+        transition: .5s;
+    }
+
+    .optionsbar .links{
+        width: 100%;
+    }
+
+    .optionsbar .links a{
+        font-size: 20px;
+    }
+
+    .active {
+        top:80px
+    }
+
+    .links:hover{
+        background: rgb(204, 0, 255);
+    }
+    
+
+} 
